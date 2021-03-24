@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import AppBar from "./components/AppBar";
+import Nav from "./components/Nav";
+import "./App.css";
+import { appData } from "./constants/appData";
+import LanguageSelector from "./components/LanguageSelector";
+import Campaigns from "./components/Campaigns";
 
 function App() {
+  const [language, setLanguage] = useState("english");
+  const [activeTab, setActiveTab] = useState("upcomingCampaigns");
+
+  const handleLanguageChange = (lang) => setLanguage(lang);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppBar />
+      <section className="container">
+        <div style={{ display: "flex" }}>
+          <h1 style={{ display: "inline", flex: 1 }}>
+            {appData.title[language]}
+          </h1>
+          <LanguageSelector handleLanguageChange={handleLanguageChange} />
+        </div>
+      </section>
+      <section>
+        <Nav
+          lang={language}
+          activeTab={activeTab}
+          updateActiveTab={(tab) => setActiveTab(tab)}
+        />
+      </section>
+      <Campaigns language={language} status={activeTab} />
     </div>
   );
 }
