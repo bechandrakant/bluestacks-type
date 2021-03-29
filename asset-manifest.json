@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/bluestacks-type/static/css/main.fef88090.chunk.css",
-    "main.js": "/bluestacks-type/static/js/main.b9f47e86.chunk.js",
-    "main.js.map": "/bluestacks-type/static/js/main.b9f47e86.chunk.js.map",
-    "runtime-main.js": "/bluestacks-type/static/js/runtime-main.1abf794d.js",
-    "runtime-main.js.map": "/bluestacks-type/static/js/runtime-main.1abf794d.js.map",
-    "static/js/2.aa8024d1.chunk.js": "/bluestacks-type/static/js/2.aa8024d1.chunk.js",
-    "static/js/2.aa8024d1.chunk.js.map": "/bluestacks-type/static/js/2.aa8024d1.chunk.js.map",
-    "static/js/3.dac99093.chunk.js": "/bluestacks-type/static/js/3.dac99093.chunk.js",
-    "static/js/3.dac99093.chunk.js.map": "/bluestacks-type/static/js/3.dac99093.chunk.js.map",
+    "main.css": "/bluestacks-type/static/css/main.a2d0e0c5.chunk.css",
+    "main.js": "/bluestacks-type/static/js/main.480b884c.chunk.js",
+    "main.js.map": "/bluestacks-type/static/js/main.480b884c.chunk.js.map",
+    "runtime-main.js": "/bluestacks-type/static/js/runtime-main.316b38e4.js",
+    "runtime-main.js.map": "/bluestacks-type/static/js/runtime-main.316b38e4.js.map",
+    "static/css/2.8cebfa1f.chunk.css": "/bluestacks-type/static/css/2.8cebfa1f.chunk.css",
+    "static/js/2.186146c8.chunk.js": "/bluestacks-type/static/js/2.186146c8.chunk.js",
+    "static/js/2.186146c8.chunk.js.map": "/bluestacks-type/static/js/2.186146c8.chunk.js.map",
+    "static/js/3.e2e07b20.chunk.js": "/bluestacks-type/static/js/3.e2e07b20.chunk.js",
+    "static/js/3.e2e07b20.chunk.js.map": "/bluestacks-type/static/js/3.e2e07b20.chunk.js.map",
     "index.html": "/bluestacks-type/index.html",
-    "static/css/main.fef88090.chunk.css.map": "/bluestacks-type/static/css/main.fef88090.chunk.css.map",
-    "static/js/2.aa8024d1.chunk.js.LICENSE.txt": "/bluestacks-type/static/js/2.aa8024d1.chunk.js.LICENSE.txt"
+    "static/css/2.8cebfa1f.chunk.css.map": "/bluestacks-type/static/css/2.8cebfa1f.chunk.css.map",
+    "static/css/main.a2d0e0c5.chunk.css.map": "/bluestacks-type/static/css/main.a2d0e0c5.chunk.css.map",
+    "static/js/2.186146c8.chunk.js.LICENSE.txt": "/bluestacks-type/static/js/2.186146c8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1abf794d.js",
-    "static/js/2.aa8024d1.chunk.js",
-    "static/css/main.fef88090.chunk.css",
-    "static/js/main.b9f47e86.chunk.js"
+    "static/js/runtime-main.316b38e4.js",
+    "static/css/2.8cebfa1f.chunk.css",
+    "static/js/2.186146c8.chunk.js",
+    "static/css/main.a2d0e0c5.chunk.css",
+    "static/js/main.480b884c.chunk.js"
   ]
 }
