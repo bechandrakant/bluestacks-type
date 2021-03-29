@@ -4,14 +4,25 @@ import InsertDriveFileIcon from "@material-ui/icons/InsertDriveFile";
 import EqualizerIcon from "@material-ui/icons/Equalizer";
 import DateRangeIcon from "@material-ui/icons/DateRange";
 import PopUp from "./PopUp";
+import DatePicker from "./DatePicker";
 
-const CampaignListData = ({ language, data, actionsLabel }) => {
+const CampaignListData = ({ language, data, actionsLabel, scheduleDate }) => {
   const [open, setOpen] = useState(false);
+  const [openDatePicker, setOpenDatePicker] = useState(false);
 
   return (
     <>
       {open === true ? (
         <PopUp data={data} close={() => setOpen(false)} language={language} />
+      ) : null}
+      {openDatePicker === true ? (
+        <DatePicker
+          scheduleDate={(timestamp) => {
+            scheduleDate(timestamp, data.id);
+            setOpenDatePicker(false);
+          }}
+          close={() => setOpenDatePicker(false)}
+        />
       ) : null}
       <tr style={{ padding: 10 }}>
         <td>
@@ -23,7 +34,10 @@ const CampaignListData = ({ language, data, actionsLabel }) => {
             }}
           >
             <span style={{ fontWeight: 400, margin: 4 }}>
-              {new Date(data.createdOn).add(-1).day().toString("MMM yyyy, dd")}
+              {new Date(data.scheduledOn)
+                .add(-1)
+                .day()
+                .toString("MMM yyyy, dd")}
             </span>
             <span
               style={{
@@ -33,7 +47,10 @@ const CampaignListData = ({ language, data, actionsLabel }) => {
                 margin: 4,
               }}
             >
-              {"5 days ago"}
+              {Math.abs(Math.floor((data.scheduledOn - Date.now()) / 86400000))}
+              {Math.floor((data.scheduledOn - Date.now()) / 86400000) > 0
+                ? " days ahead"
+                : " days ago"}
             </span>
           </div>
         </td>
@@ -103,6 +120,7 @@ const CampaignListData = ({ language, data, actionsLabel }) => {
                 justifyContent: "center",
                 alignItems: "center",
               }}
+              onClick={() => setOpenDatePicker(true)}
             >
               <DateRangeIcon style={{ color: "#7BAFE3", paddingRight: 6 }} />{" "}
               {actionsLabel[3]}

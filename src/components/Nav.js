@@ -19,6 +19,7 @@ const Nav = ({ lang, activeTab, updateActiveTab }) => {
             fontWeight: route.path === activeTab ? 600 : 300,
             color: route.path === activeTab ? "green" : "black",
             borderBottom: route.path === activeTab ? "2px solid green" : null,
+            cursor: "pointer",
           }}
           onClick={() => updateActiveTab(route.path)}
           key={route.id}

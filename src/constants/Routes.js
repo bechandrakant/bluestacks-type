@@ -8,7 +8,7 @@ export const routes = [
     path: "upcomingCampaigns",
   },
   {
-    id: 2,
+    id: 0,
     label: {
       english: "Live Campaigns",
       hindi: "लाइव अभियान",
@@ -16,7 +16,7 @@ export const routes = [
     path: "liveCampaigns",
   },
   {
-    id: 3,
+    id: -1,
     label: {
       english: "Past Campaigns",
       hindi: "पिछला अभियान",

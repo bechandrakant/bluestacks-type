@@ -1,4 +1,5 @@
 import React from "react";
+import DatePicker from "./DatePicker";
 
 const PopUp = ({ data, language, close }) => {
   const { image_url, name, region, price } = data;

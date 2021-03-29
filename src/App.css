@@ -6,6 +6,10 @@ h1 {
   font-size: 32px;
 }
 
+select {
+  cursor: pointer;
+}
+
 .container {
   width: 80%;
   margin: auto;
@@ -15,12 +19,6 @@ h1 {
   .container {
     width: 96%;
   }
-}
-
-button {
-  padding: 10px;
-  background-color: #202640;
-  color: #fff;
 }
 
 table {
@@ -45,4 +43,5 @@ tr {
   display: flex;
   justify-content: left;
   align-items: center;
+  cursor: pointer;
 }
